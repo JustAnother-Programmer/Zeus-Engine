@@ -35,5 +35,18 @@
     <ClInclude Include="resource.h">
       <Filter>Source\Public %28Header%29</Filter>
     </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Source\Public %28Header%29</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DefaultProject.rc">
+      <Filter>Resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Icons\ZEngine.ico">
+      <Filter>Resources</Filter>
+    </Image>
   </ItemGroup>
 </Project>
