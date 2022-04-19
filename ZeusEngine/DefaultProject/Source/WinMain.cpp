@@ -1,13 +1,22 @@
-#include <Windows.h>
-
-#define MAX_NAME_STRING 256
-#define HInstance() GetModuleHandle(NULL)
+#include "pch.h"
 
 WCHAR WindowClass[MAX_NAME_STRING];
 WCHAR WindowTitle[MAX_NAME_STRING];
 
 INT WindowWidth;
 INT WindowHeight;
+
+LRESULT CALLBACK ProcessWindow(HWND hWnd, UINT message, WPARAM wparam, LPARAM lparam)
+{
+	switch (message)
+	{
+	case WM_DESTROY:
+		PostQuitMessage(0);
+		break;
+	}
+
+	return DefWindowProc(hWnd, message, wparam, lparam);
+}
 
 int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT)
 {
@@ -30,8 +39,8 @@ int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT)
 	wcex.hCursor = LoadCursor(nullptr, IDC_ARROW);
 	wcex.hbrBackground = (HBRUSH)GetStockObject(NULL_BRUSH);
 
-	wcex.hIcon = LoadIcon(0, IDI_APPLICATION);
-	wcex.hIconSm = LoadIcon(0, IDI_APPLICATION);
+	wcex.hIcon = LoadIcon(nullptr, IDI_APPLICATION);
+	wcex.hIconSm = LoadIcon(nullptr, IDI_APPLICATION);
 
 	wcex.lpszClassName = WindowClass;
 
@@ -39,8 +48,7 @@ int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT)
 
 	wcex.hInstance = HInstance();
 
-	// TODO: Define some extra stuff here later rather than using default
-	wcex.lpfnWndProc = DefWindowProc;
+	wcex.lpfnWndProc = ProcessWindow;
 
 	RegisterClassEx(&wcex);
 
@@ -50,8 +58,8 @@ int CALLBACK WinMain(HINSTANCE, HINSTANCE, LPSTR, INT)
 
 	if (!hWnd)
 	{
-		// Something went wrong, exit
-		// TODO: Better communication method for why its shutdown later
+		// Something went wrong during creation, exit
+		// TODO: Better communication method for why its shutdown later (Logger)
 		MessageBox(nullptr, L"Failed To Create The Window!", nullptr, 0);
 		return 0;
 	}
