@@ -19,6 +19,12 @@
     <Filter Include="Source\Precompiled Headers">
       <UniqueIdentifier>{89556c28-ae80-4a1d-b2ff-e0fd2579c442}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resources\Icons">
+      <UniqueIdentifier>{7fafadc5-6cce-4c89-ba89-3c65b6e2b0ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Resource Headers">
+      <UniqueIdentifier>{4799e0e6-8777-4b56-b0cc-9e6bdb2b9f7b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\WinMain.cpp">
@@ -33,10 +39,7 @@
       <Filter>Source\Precompiled Headers</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
-      <Filter>Source\Public %28Header%29</Filter>
-    </ClInclude>
-    <ClInclude Include="resource1.h">
-      <Filter>Source\Public %28Header%29</Filter>
+      <Filter>Resources\Resource Headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -46,7 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Icons\ZEngine.ico">
-      <Filter>Resources</Filter>
+      <Filter>Resources\Icons</Filter>
     </Image>
   </ItemGroup>
 </Project>
