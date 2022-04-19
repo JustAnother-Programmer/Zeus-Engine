@@ -33,6 +33,9 @@
     <ClCompile Include="Source\pch.cpp">
       <Filter>Source\Precompiled Headers</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Application.cpp">
+      <Filter>Source\Private %28Source%29</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\pch.h">
@@ -40,6 +43,9 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Resources\Resource Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Application.h">
+      <Filter>Source\Public %28Header%29</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

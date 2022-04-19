@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{e4594bae-1aa1-4e84-8f24-3d136fc8a971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public %28Header%29">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source\Private %28Source%29">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source\Precompiled Headers">
+      <UniqueIdentifier>{2c1fef60-a3f3-4e51-94bb-ebf5427c6a1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Private %28Source%29\Platform">
+      <UniqueIdentifier>{e294d1cf-dafd-47d7-8966-dff1e32bfde0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Private %28Source%29\Platform\Win32">
+      <UniqueIdentifier>{5320de05-8c6a-462c-b7d9-6fb56c857e35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public %28Header%29\Platform">
+      <UniqueIdentifier>{902488df-bc2a-49a2-a20e-7b2420acee76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Public %28Header%29\Platform\Win32">
+      <UniqueIdentifier>{9b2ebc97-0c48-460c-a80b-70b1011d011d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Zeus.cpp">
+      <Filter>Source\Precompiled Headers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Platform\Win32\IApplication.cpp">
+      <Filter>Source\Private %28Source%29\Platform\Win32</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Zeus.h">
+      <Filter>Source\Precompiled Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Platform\Win32\WinEntry.h">
+      <Filter>Source\Public %28Header%29\Platform\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Platform\Win32\IApplication.h">
+      <Filter>Source\Public %28Header%29\Platform\Win32</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

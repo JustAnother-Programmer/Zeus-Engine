@@ -103,7 +103,7 @@ VOID CreateWindowClass()
 
 VOID InitializeWindow()
 {
-	HWND hWnd = CreateWindow(WindowClass, WindowTitle, WS_OVERLAPPEDWINDOW, CW_USEDEFAULT,
+	const HWND hWnd = CreateWindow(WindowClass, WindowTitle, WS_OVERLAPPEDWINDOW, CW_USEDEFAULT,
 		0, WindowWidth, WindowHeight, nullptr, nullptr, HInstance(), nullptr);
 
 	if (!hWnd)
