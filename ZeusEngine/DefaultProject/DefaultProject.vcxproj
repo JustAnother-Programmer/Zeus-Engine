@@ -63,6 +63,7 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Zeus-Engine\ZeusEngine\Zeus\Source;C:\Zeus-Engine\ZeusEngine\DefaultProject\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -81,6 +82,7 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\Zeus-Engine\ZeusEngine\Zeus\Source;C:\Zeus-Engine\ZeusEngine\DefaultProject\Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -104,6 +106,11 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Icons\ZEngine.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Zeus\Zeus.vcxproj">
+      <Project>{4038e85a-6657-4834-a43b-8d13d3125989}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

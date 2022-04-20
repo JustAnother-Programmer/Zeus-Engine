@@ -1,10 +1,12 @@
 #pragma once
 
-class IApplication
+#define ENTRYAPP(app) IApplication* EntryApplication() { return new app; }
+
+class ZEUS_API IApplication
 {
 public:
 	IApplication();
-	virtual ~IApplication() = 0;
+	virtual ~IApplication() {};
 
 public:
 	// Called to initialize the application
@@ -13,3 +15,5 @@ public:
 	// Called on a loop when the application is running
 	virtual VOID Update() = 0;
 };
+
+IApplication* EntryApplication();
